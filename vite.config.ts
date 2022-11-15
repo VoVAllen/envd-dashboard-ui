@@ -24,7 +24,6 @@ export default defineConfig({
 
     Vue({
       include: [/\.vue$/],
-      reactivityTransform: true,
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages

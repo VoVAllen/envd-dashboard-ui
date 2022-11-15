@@ -3,11 +3,11 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'ViteTail',
+  title: 'envd dashboard',
   meta: [
     {
       name: 'description',
-      content: 'Vite Stater Template. Now with TailwindCSS!',
+      content: 'TensorChord envd',
     },
     {
       name: 'theme-color',

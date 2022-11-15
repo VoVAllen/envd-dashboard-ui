@@ -2,6 +2,7 @@
 import { themeChange } from 'theme-change'
 import { tryOnMounted } from '@vueuse/core'
 
+
 // Theme Change
 tryOnMounted(() => {
   themeChange(false)
@@ -15,7 +16,7 @@ tryOnMounted(() => {
     </RouterLink>
 
     <RouterLink class="mx-2" to="/about">
-      <i-carbon-dicom-overlay class="h-6 w-6 hover:text-blue-500" />
+      <i-carbon-align-box-top-center class="h-6 w-6 hover:text-blue-500" />
     </RouterLink>
 
     <a class="mx-2" rel="noreferrer" href="https://github.com/compilekaiten/vitetail" target="_blank" title="GitHub">

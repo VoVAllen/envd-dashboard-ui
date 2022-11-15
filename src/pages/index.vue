@@ -1,16 +1,20 @@
 <script setup lang="ts">
-const user = useUserStore()
-const name = $ref(user.savedName)
+// const user = useUserStore()
+// const name = ref(user.savedName)
 
-const router = useRouter()
-const go = () => {
-  if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
-}
+// const router = useRouter()
+// const go = () => {
+//   if (name)
+//     router.push(`/hi/${encodeURIComponent(name.value)}`)
+// }
 </script>
 
 <template>
-  <div class="container mx-auto grid justify-center pt-10">
+  <div class="min-h-screen flex">
+
+    <Sidebar class="flex-none z-40 h-screen overflow-y-auto bg-white w-80 dark:bg-gray-800" />
+
+    <!-- 
     <div class="grid grid-rows-1 justify-center">
       <img src="/pwa-512x512.png" alt="ViteTail Logo" width="100" heigh="100">
     </div>
@@ -25,18 +29,17 @@ const go = () => {
       <pre data-prefix="$"><code>ViteTail</code></pre>
       <pre data-prefix=">" class="text-error"><code class="text-error">Vite + TailwindCSS + DaisyUI</code></pre>
       <pre data-prefix=">" class="text-success"><code>Inspired by Vitesse</code></pre>
-    </div>
-  </div>
+    </div> -->
 
-  <div class="container mx-auto grid justify-center py-5">
-    <input id="input" v-model="name" type="text" placeholder="What's your name?" class="input input-bordered w-full mb-5 focus:input-info" autocomplete="off">
-    <button
-      id="go"
-      class="btn btn-wide btn-success" :disabled="!name"
-      @click="go"
-    >
-      GO
-    </button>
+    <div class="container mx-auto flex-1 py-5 mx-5">
+      <Navbar />
+      <div class="container p-5">
+        <div class="container py-5">
+          <span class="font-semibold	text-lg	">envd Environments</span>
+        </div>
+        <Table />
+      </div>
+    </div>
   </div>
 </template>
 
