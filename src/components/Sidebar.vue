@@ -1,6 +1,6 @@
 <template>
-<aside class="w-64 flex px-2" aria-label="Sidebar">
-    <div class="overflow-y-auto flex-1 py-4 px-4  bg-gray-100 rounded dark:bg-gray-800">
+<aside class="w-64 flex" aria-label="Sidebar">
+    <div class="overflow-y-auto flex-1 py-4 px-6  bg-gray-100 rounded dark:bg-gray-800">
        <a href="https://envd.tensorchord.ai" class="flex items-center pl-2.5 mb-5 h-20">
           <img src="https://user-images.githubusercontent.com/12974685/200007223-cd94fe9a-266d-4bbd-ac23-e71043d0c3dc.svg" class="mr-3 h-10" alt="envd Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">envd</span>
