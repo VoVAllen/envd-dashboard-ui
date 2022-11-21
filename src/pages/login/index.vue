@@ -59,6 +59,13 @@
                                     in</button>
                                 </router-link>
                             </div>
+
+                            
+                            <div class="space-y-1">
+                                <div class="mt-1 mx-auto text-center">
+                                    Don't have an account yet? <router-link class="text-indigo-600" to="/signup">New Account</router-link>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
