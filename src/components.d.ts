@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     IMdiDriveDocument: typeof import('~icons/mdi/drive-document')['default']
     IMdiGear: typeof import('~icons/mdi/gear')['default']
     'IRi:homeLine': typeof import('~icons/ri/home-line')['default']
+    LoginImg: typeof import('./components/LoginImg.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
