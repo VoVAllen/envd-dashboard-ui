@@ -39,6 +39,6 @@ const router = useRouter()
 
 <route lang="yaml">
 meta:
-  layout: home
+  layout: default
 </route>
 

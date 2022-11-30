@@ -7,26 +7,16 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Footer: typeof import('./components/Footer.vue')['default']
-    ICarbonAlignBoxTopCenter: typeof import('~icons/carbon/align-box-top-center')['default']
-    ICarbonAlignBoxTopLeft: typeof import('~icons/carbon/align-box-top-left')['default']
-    ICarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
-    ICarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
-    'IFxemoji:blossom': typeof import('~icons/fxemoji/blossom')['default']
-    'ILogos:tailwindcssIcon': typeof import('~icons/logos/tailwindcss-icon')['default']
-    'ILogos:vitejs': typeof import('~icons/logos/vitejs')['default']
+    EnvDataTable: typeof import('./components/EnvDataTable.vue')['default']
     IMaterialSymbolsCalendarMonth: typeof import('~icons/material-symbols/calendar-month')['default']
     IMaterialSymbolsInsertChartRounded: typeof import('~icons/material-symbols/insert-chart-rounded')['default']
     IMdiBin: typeof import('~icons/mdi/bin')['default']
-    IMdiBinEmpty: typeof import('~icons/mdi/bin-empty')['default']
     IMdiDriveDocument: typeof import('~icons/mdi/drive-document')['default']
     IMdiGear: typeof import('~icons/mdi/gear')['default']
-    'IRi:homeLine': typeof import('~icons/ri/home-line')['default']
     LoginImg: typeof import('./components/LoginImg.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
-    Table: typeof import('./components/Table.vue')['default']
   }
 }

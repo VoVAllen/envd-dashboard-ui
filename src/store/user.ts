@@ -1,32 +1,25 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { useFetch } from '@vueuse/core'
 
 export const useUserStore = defineStore('user', () => {
-  /**
-   * Current name of the user.
-   */
-  const savedName = ref('')
-  const previousNames = ref(new Set<string>())
 
-  const usedNames = computed(() => Array.from(previousNames.value))
-  const otherNames = computed(() => usedNames.value.filter(name => name !== savedName.value))
+  const userInfo = ref(useLocalStorage("userInfo", {
+    username: '',
+    jwtToken: '',
+  }))
 
-  /**
-   * Changes the current name of the user and saves the one that was used
-   * before.
-   *
-   * @param name - new name to set
-   */
-  function setNewName(name: string) {
-    if (savedName.value)
-      previousNames.value.add(savedName.value)
-
-    savedName.value = name
+  function logIn() {
+    // TODO
+    let { } = useFetch('/api/login', {})
   }
 
+  function setUser(username: string) {
+    userInfo.value.username = username
+  }
   return {
-    setNewName,
-    otherNames,
-    savedName,
+    userInfo,
+    logIn,
+    setUser,
   }
 })
 

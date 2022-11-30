@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { definitions } from "~/composables/types/scheme"
+const props = defineProps<{ datas: definitions["types.EnvironmentListResponse"] }>()
+</script>
+
 <template>
     <div class="overflow-x-auto relative">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -25,24 +30,27 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="_ in 5" class="bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-500">
+                <tr v-for="e in props.datas.items" class="bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-500">
                     <th scope="row" class="py-4 px-3 font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                        fairydart
+                        {{ e.name }}
                     </th>
                     <td class="py-4 px-6">
-                        <span class="text-blue-500">gaocegege/test-envd</span>
+                        <span class="text-blue-500">{{ e.spec!.image }}</span>
                     </td>
                     <td class="py-4 px-6">
                         SSH | Jupyter | Tensorboard
                     </td>
                     <td class="py-4 px-6">
-                        32 days ago
+                        "Unknown for now"
                     </td>
                     <td class="py-4 px-6">
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">Running</span>
+                        <span
+                            class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                            {{ e.status!.phase }}
+                        </span>
                     </td>
                     <td class="py-4 px-6">
-                        <i-mdi-bin class="h-6 w-6"/>
+                        <i-mdi-bin class="h-6 w-6" />
                     </td>
                 </tr>
             </tbody>

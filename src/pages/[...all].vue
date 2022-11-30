@@ -3,11 +3,6 @@
 
 <template>
   <div class="container mx-auto flex justify-center py-10 text-5xl">
-    Not Found... L
+    404 Not Found
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: 404
-</route>

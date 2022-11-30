@@ -7,12 +7,12 @@ import generateSitemap from 'vite-ssg-sitemap'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import { VitePWA } from 'vite-plugin-pwa'
 import Inspect from 'vite-plugin-inspect'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/envd/' : '/',
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -67,38 +67,6 @@ export default defineConfig({
     Icons({
       compiler: 'vue3',
       autoInstall: true,
-    }),
-
-    // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      devOptions: {
-        enabled: false,
-      },
-      includeAssets: ['favicon.ico'],
-      manifest: {
-        name: 'ViteTail',
-        short_name: 'ViteTail',
-        theme_color: '#141824',
-        icons: [
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        ],
-      },
     }),
 
     // https://github.com/antfu/vite-plugin-inspect

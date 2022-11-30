@@ -1,32 +1,4 @@
-- - - -
-
-<br>
-
-<div align="center">
-<img src="images/../.github/images/vt.png" height="100" />
-</div>
-
-<br>
-
-<p align='center'>
-<b>ViteTail</b> is a Vue + Vite + TailwindCSS + DaisyUI template, heavily based on Vitesse.
-</p>
-
-<p align='center'>
-Almost all the great features of Vitesse, but with your favorite CSS framework!
-</p>
-
-<p align='center'>
-ViteTail comes with DaisyUI out of the box. Feel free to switch to any component library you want.
-</p>
-
-<br>
-
-<p align='center'>
-<a href="https://vitetail.netlify.app/">Live Demo</a>
-</p>
-
-<br>
+# Dashboard of envd
 
 - - - -
 ## Features
@@ -41,8 +13,6 @@ ViteTail comes with DaisyUI out of the box. Feel free to switch to any component
 
 - 📑 [Layout system](./src/layouts)
 
-- 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
-
 - 🎨 [TailwindCSS](https://tailwindcss.com/)
 
 - 😃 [Use icons from any icon sets with auto importing](https://github.com/antfu/unplugin-icons)
@@ -50,8 +20,6 @@ ViteTail comes with DaisyUI out of the box. Feel free to switch to any component
 - 🔎 [Component Preview](https://github.com/johnsoncodehk/vite-plugin-vue-component-preview)
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
-
-- 🤙🏻 [Reactivity Transform](https://vuejs.org/guide/extras/reactivity-transform.html) enabled
 
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 
@@ -65,10 +33,42 @@ ViteTail comes with DaisyUI out of the box. Feel free to switch to any component
 
 - - - -
 
-## Features Removed
--  I18n
--  Markdown Support
--  UnoCSS
+## Usage
+
+### Setup
+
+Run `pnpm i`
+### Development
+
+Visit http://localhost:3333 to view the project
+
+```bash
+pnpm open # To open automatically
+pnpm dev # To run the dev server
+```
+
+Update Dependencies
+
+```bash
+pnpm dep # Runs Taze to update Major and Minor dependencies
+```
+
+### Build
+
+To build your App, run
+
+```bash
+pnpm build # Build for Production
+pnpm tbuild # Lint and Typecheck before building
+```
+
+And you will see the generated file in `dist` that are ready to be served.
+
+### Deploy on Netlify
+
+Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
+
+
 
 - - - -
 ## Pre-packed
@@ -123,64 +123,3 @@ ViteTail comes with DaisyUI out of the box. Feel free to switch to any component
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
   - [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-## Try it now!
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/compilekaiten/ViteTail/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit compilekaiten/vitetail my-vitetail-app
-cd my-vitetail-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
-```
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the title in `App.vue`
-- [ ] Change the hostname in `vite.config.ts`
-- [ ] Change the favicon in `public`
-- [ ] Remove the `.github` folder which contains the funding info
-- [ ] Clean up the READMEs and remove routes
-
-And, enjoy :)
-
-## Usage
-
-### Development
-
-Visit http://localhost:3333 to view the project
-
-```bash
-pnpm open # To open automatically
-pnpm dev # To run the dev server
-```
-
-Update Dependencies
-
-```bash
-pnpm dep # Runs Taze to update Major and Minor dependencies
-```
-
-### Build
-
-To build your App, run
-
-```bash
-pnpm build # Build for Production
-pnpm tbuild # Lint and Typecheck before building
-```
-
-And you will see the generated file in `dist` that are ready to be served.
-
-### Deploy on Netlify
-
-Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
-
-#### PR's are very welcome
